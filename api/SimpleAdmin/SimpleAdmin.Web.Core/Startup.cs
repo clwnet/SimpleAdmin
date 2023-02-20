@@ -48,7 +48,8 @@ public class Startup : AppStartup
             app.UseResponseCompression();
         }
         // 启用HTTPS
-        app.UseHttpsRedirection();
+        //app.UseHttpsRedirection();
+       
 
         // 添加状态码拦截中间件
         app.UseUnifyResultStatusCodes();

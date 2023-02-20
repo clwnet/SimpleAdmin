@@ -171,6 +171,7 @@ public class GenBasicService : DbRepository<GenBasic>, IGenbasicService
             entity = await InsertReturnEntityAsync(entity);//输入参数转实体并插入
             genConfigs.ForEach(it => { it.BasicId = entity.Id; });//遍历字段赋值基础Id
             await Context.Insertable(genConfigs).ExecuteCommandAsync();
+            _logger.LogInformation(genConfigs.ToJson(), null);
 
         });
         if (!result.IsSuccess)//如果失败了

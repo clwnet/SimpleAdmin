@@ -2,18 +2,18 @@
   //连接字符串配置
   "ConnectionStrings": {
     //redis配置
-    "Redis": "server=127.0.0.1:6379;password=123456;db=9",
+    "Redis": "server=127.0.0.1:6379;db=9",
     //Sqlsugar数据库配置
     "Sqlsugar": [
-      {
-        "ConfigId": "SimpleAdmin", //租户ID
-        "ConnectionString": "Data Source=./SimpleAdmin.db", //连接字符串
-        "DbType": "Sqlite", //数据库类型
-        "IsAutoCloseConnection": true, //是否自动释放
-        "IsInitDb": false, //是否初始化数据库,适用于codefirst
-        "IsSeedData": true, //是否初始化种子数据
-        "IsUnderLine": true, //是否驼峰转下划线
-      },
+      //{
+      //  "ConfigId": "SimpleAdmin", //租户ID
+      //  "ConnectionString": "Data Source=./SimpleAdmin.db", //连接字符串
+      //  "DbType": "Sqlite", //数据库类型
+      //  "IsAutoCloseConnection": true, //是否自动释放
+      //  "IsInitDb": false, //是否初始化数据库,适用于codefirst
+      //  "IsSeedData": true, //是否初始化种子数据
+      //  "IsUnderLine": true, //是否驼峰转下划线
+      //},
       //{
       //  "ConfigId": "SimpleAdmin", //租户ID
       //  "ConnectionString": "server=192.168.1.x;Database=SimpleAdmin;Uid=root;Pwd=xx;CharSet=utf8mb4;", //连接字符串
@@ -32,6 +32,15 @@
       //  "IsSeedData": false, //是否初始化种子数据
       //  "IsUnderLine": false, //是否驼峰转下划线
       //}
+      {
+        "ConfigId": "SimpleAdmin", //租户ID
+        "ConnectionString": "Server=127.0.0.1;Database=CCAdmin;User=sa;Password=Oskim68s95*;MultipleActiveResultSets=True;", //连接字符串
+        "DbType": "SqlServer", //数据库类型
+        "IsAutoCloseConnection": true, //是否自动释放
+        "IsInitDb": false, //是否初始化数据库,适用于codefirst
+        "IsSeedData": false, //是否初始化种子数据
+        "IsUnderLine": false //是否驼峰转下划线
+      }
     ]
   },
   //秘钥配置

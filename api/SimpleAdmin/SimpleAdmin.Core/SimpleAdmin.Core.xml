@@ -998,6 +998,126 @@
              排序码 
             </summary>
         </member>
+        <member name="T:SimpleAdmin.Core.SysTenant">
+            <summary>
+            多租户
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.name">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.contacts">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.phone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.businessLicenseNo">
+            <summary>
+            营业执照号码
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.businessLicenseName">
+            <summary>
+            营业执照名称
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.businessLicensePic">
+            <summary>
+            营业执照照片
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.legalPersonName">
+            <summary>
+            法人姓名
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.legalPersonCardNo">
+            <summary>
+            法人身份证号
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.legalPersonCardPicFont">
+            <summary>
+            法人身份证国徽面
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.legalPersonCardPicBack">
+            <summary>
+            法人身份证信息面
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.aloneDataBase">
+            <summary>
+            是否独立数据库
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.dbType">
+            <summary>
+            数据库格式 0、SqlServer 1、MySql 2、Sqlite 3、Oracle 
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.dBServer">
+            <summary>
+            数据库地址
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.dBName">
+            <summary>
+            数据库名
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.dBUser">
+            <summary>
+            数据库账号
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.dBPassWord">
+            <summary>
+            数据库密码
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.createTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.createUser">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.modifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.modifyUser">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.isEnable">
+            <summary>
+            是否开启
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.isDelete">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:SimpleAdmin.Core.SysTenant.endTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
         <member name="T:SimpleAdmin.Core.PrimaryKeyEntity">
             <summary>
             主键实体基类
