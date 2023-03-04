@@ -28,11 +28,11 @@ public class DatabaseLoggingWriter : IDatabaseLoggingWriter
         var loggingMonitor = jsonString.ToJsonEntity<LoggingMonitorJson>();
         //日志时间赋值
         loggingMonitor.LogDateTime = logMsg.LogDateTime;
-        //验证失败之类的不记录日志
-        if (loggingMonitor.Validation == null)
+        //验证失败和没有DisplayTitle之类的不记录日志
+        if (loggingMonitor.Validation == null && loggingMonitor.DisplayTitle != null)
         {
-            //获取操作名称,如果没有displayname特性就用默认的
-            var operation = string.IsNullOrEmpty(loggingMonitor.DisplayTitle) ? logMsg.Context.Get(LoggingConst.Operation).ToString() : loggingMonitor.DisplayTitle;
+            //获取操作名称
+            var operation = loggingMonitor.DisplayTitle;
             var client = (ClientInfo)logMsg.Context.Get(LoggingConst.Client);//获取客户端信息
             var path = logMsg.Context.Get(LoggingConst.Path).ToString();//获取操作名称
             var method = logMsg.Context.Get(LoggingConst.Method).ToString();//获取方法
@@ -126,9 +126,11 @@ public class DatabaseLoggingWriter : IDatabaseLoggingWriter
 
         //获取参数json字符串，
         var paramJson = (loggingMonitor.Parameters == null || loggingMonitor.Parameters.Count == 0) ? null : loggingMonitor.Parameters[0].Value.ToJsonString();
-        //获取结果json字符串
-        var resultJson = loggingMonitor.ReturnInformation.Value == null ? null : loggingMonitor.ReturnInformation.Value.ToJsonString();
 
+        //获取结果json字符串
+        var resultJson = string.Empty;
+        if (loggingMonitor.ReturnInformation != null)
+            resultJson = loggingMonitor.ReturnInformation.Value == null ? null : loggingMonitor.ReturnInformation.Value.ToJsonString();
         //操作日志表实体
         var devLogOperate = new DevLogOperate
         {

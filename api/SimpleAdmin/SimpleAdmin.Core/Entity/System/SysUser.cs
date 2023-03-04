@@ -45,11 +45,7 @@ public class SysUser : BaseEntity
     ///</summary>
     [SugarColumn(ColumnName = "Gender", ColumnDescription = "性别", Length = 200, IsNullable = true)]
     public string Gender { get; set; }
-    /// <summary>
-    /// 年龄 
-    ///</summary>
-    [SugarColumn(ColumnName = "Age", ColumnDescription = "年龄", Length = 200, IsNullable = true)]
-    public string Age { get; set; }
+
     /// <summary>
     /// 出生日期 
     ///</summary>
@@ -243,6 +239,12 @@ public class SysUser : BaseEntity
     /// </summary>
     [SugarColumn(IsIgnore = true)]
     public string OrgName { get; set; }
+
+    /// <summary>
+    /// 机构信息全称
+    /// </summary>
+    [SugarColumn(IsIgnore = true)]
+    public string OrgNames { get; set; }
 
     /// <summary>
     /// 职位信息
